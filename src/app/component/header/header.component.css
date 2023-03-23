@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.container-fluid{
+    width: 100%;
+    height: 15vh;
+    padding: 5%;
+    background:linear-gradient(blue,violet);
+    display: flex;
+}
+ul li{
+ list-style: none;
+ display: inline-block;
+ margin-left: 60px;
+ 
+ 
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.btn{
+    color: white;
+}
+
+
+
+

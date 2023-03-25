@@ -5,10 +5,11 @@
         <div class="card">
             <div class="card-body">
              <h2 class="text-center">Sign Up</h2>   
-          <form>
-         <input type="text" class="form-control my-3 py-2" id="" name="name"  placeholder="Name">
-         <input type="password" class="form-control my-3 py-2" id="" name="password"  placeholder="Password">
-         <input type="email" class="form-control my-3 py-2" id="" name="email"  placeholder="Email">
+          <form [formGroup]="seller" (submit)="signUp(seller.value)">
+         <input type="text" class="form-control my-3 py-2"  name="name" formControlName="name"  placeholder="Name">
+         <input type="password" class="form-control my-3 py-2"  name="password" formControlName="password"  placeholder="Password">
+         <input type="email" class="form-control my-3 py-2"  name="email" formControlName="email"  placeholder="Email">
+         <!-- <input type="id" class="form-control my-3 py-2" id="id" name="id" formControlName="id"> -->
             <div class="text-center mt-3">
                 <button class="btn btn-primary">sign up</button>
                 <a (click)="goLogin()" class="nav-link">Already have an account?Click to login</a>
@@ -30,10 +31,10 @@
                             <div class="card">
                                 <div class="card-body">
                                  <h2 class="text-center">Login</h2>   
-                              <form>
+                              <form [formGroup]="log">
                             
-                             <input type="password" class="form-control my-3 py-2" id="" name="password"  placeholder="Password">
-                             <input type="email" class="form-control my-3 py-2" id="" name="email"  placeholder="Email">
+                             <input type="password" class="form-control my-3 py-2" id="" name="password" formControlName="password" placeholder="Password">
+                             <input type="email" class="form-control my-3 py-2" id="" name="email" formControlName="email" placeholder="Email">
                                 <div class="text-center mt-3">
                                     <button class="btn btn-primary">Login</button>
                                     <a (click)="goSignup()" class="nav-link">Don't have account?Click to signup</a>

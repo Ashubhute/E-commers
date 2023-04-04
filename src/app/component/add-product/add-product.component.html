@@ -1,0 +1,26 @@
+<div class="container mt-4 pt-5">
+
+    <div class="row">    
+     <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+             <h2 class="text-center">Add New Product</h2>   
+          <form [formGroup]="Add" (submit)="Aproduct(Add.value)">
+         <input type="text" class="form-control my-3 py-2"  name="name" formControlName="name"  placeholder="Enter product Name">
+         <input type="password" class="form-control my-3 py-2"  name="price" formControlName="price"  placeholder="Enter Product Price">
+         <input type="email" class="form-control my-3 py-2"  name="color" formControlName="color"  placeholder="Enter Product Color">
+         <input type="email" class="form-control my-3 py-2"  name="category" formControlName="category"  placeholder="Enter Product Category">
+         <input type="email" class="form-control my-3 py-2"  name="image" formControlName="image"  placeholder="Enter Product Image URL">
+         <input type="email" class="form-control my-3 py-2"  name="Description" formControlName="Description"  placeholder="Enter Product Description">
+         
+            <div class="text-center mt-3">
+                <button class="btn btn-primary">Add Product</button>
+               
+            </div>
+
+          </form>
+        </div>
+     </div>
+     </div>
+    </div>
+</div>

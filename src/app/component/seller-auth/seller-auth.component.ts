@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+
 import { SellerService } from 'src/app/services/seller.service';
-import { Signup } from 'src/datatype';
+import { Login, Signup } from 'src/datatype';
 
 @Component({
   selector: 'app-seller-auth',
@@ -13,8 +13,9 @@ export class SellerAuthComponent implements OnInit {
  
 
 
-  constructor(private sell:SellerService,private rout:Router) { }
-  showlogin=false
+  constructor(private sell:SellerService) { }
+  showlogin=false;
+  Autherror:string='';
 
   seller:FormGroup =new FormGroup({
    'name':new FormControl(''),
@@ -24,18 +25,30 @@ export class SellerAuthComponent implements OnInit {
 
   })
   log:FormGroup=new FormGroup({
-   'name':new FormControl(''),
+   'email':new FormControl(''),
    'password':new FormControl(''),
   })
   
   
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sell.reloadSeller()
+  }
 
   signUp(data:Signup){
     console.log(data)
     this.sell.userSignup(this.seller.value)
-    this.rout.navigate(['seller-home'])
+   
 
+    }
+    login(data:Login){
+    console.log(data)
+    this.sell.userlogin(this.log.value)
+    this.sell.isLoginerr.subscribe((err)=>{
+      if(err){
+        this.Autherror="email or password incorrect";
+      }
+      
+    })
     }
    goSignup(){
   this.showlogin=false

@@ -1,17 +1,24 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand fs-2 px-2">E-COMMERS</a>
-    <form class="d-flex w-30%">
+   <h1><a routerLink="/" class="navbar-brand fs-2 px-2">E-COMMERS</a></h1>
+    <form class="d-flex w-30%" *ngIf="menuType==='default'">
       <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
       <button class="btn btn-success" type="submit">Search</button>
     </form>
-    <ul class="d-flex ">
+    <div [ngSwitch]="menuType">
+    <ul class="d-flex" *ngSwitchCase="'default'">
       <li><a routerLink="seller">Seller</a></li>
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="">Login</a></li>
       <li><a routerLink="">Cart(0)</a></li>
     </ul>
-    
+    <ul class="d-flex" *ngSwitchCase="'seller'">
+      <li><a routerLink="seller">{{sellerName | titlecase}}</a></li>
+      <li><a routerLink="add-product">Add Product</a></li>
+      <li><a routerLink="seller-home">Product list</a></li>
+      <li><a routerLink="" (click)="Logout()">Logout</a></li>
+    </ul>
+    </div>
   </div>
 </nav>
   

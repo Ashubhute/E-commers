@@ -30,8 +30,9 @@
                          <div class="col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                 <h2 class="text-center">Login</h2>   
-                              <form [formGroup]="log">
+                                 <h2 class="text-center">Login</h2>  
+                                 <p class="px-2" style="color: brown;">{{Autherror}}</p> 
+                              <form [formGroup]="log" (submit)="login(log.value)">
                             
                              <input type="password" class="form-control my-3 py-2" id="" name="password" formControlName="password" placeholder="Password">
                              <input type="email" class="form-control my-3 py-2" id="" name="email" formControlName="email" placeholder="Email">

@@ -9,6 +9,7 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './component/seller-home/seller-home.component';
+import { AddProductComponent } from './component/add-product/add-product.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SellerHomeComponent } from './component/seller-home/seller-home.compone
     SellerAuthComponent,
     HomeComponent,
     SellerHomeComponent,
+    AddProductComponent
     
   ],
   imports: [
@@ -31,7 +33,8 @@ import { SellerHomeComponent } from './component/seller-home/seller-home.compone
     AppComponent,
     HeaderComponent,
     SellerAuthComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

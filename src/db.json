@@ -46,6 +46,40 @@
       "password": "45",
       "email": "sneha@gmail.com",
       "id": 74
+    },
+    {
+      "name": "ashwini",
+      "password": "ashwini123",
+      "email": "ashubhute@gmail.com",
+      "id": 75
+    }
+  ],
+  "products": [
+    {
+      "name": "iphone 14",
+      "price": "100000",
+      "category": "mobile",
+      "color": "black",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661026579503",
+      "Description": "hi users"
+    },
+    {
+      "name": "samsung",
+      "price": "15000",
+      "category": "mobile",
+      "color": "beige",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661026579503",
+      "Description": "handy mobile",
+      "id": "4"
+    },
+    {
+      "name": "samsung",
+      "price": "40000",
+      "category": "mobile",
+      "color": "red",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661026579503",
+      "Description": "poeii",
+      "id": "ovHOP5M"
     }
   ]
 }
